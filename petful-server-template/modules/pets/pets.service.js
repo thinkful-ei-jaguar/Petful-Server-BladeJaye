@@ -43,8 +43,14 @@ const Pets = {
     return pets.dogs;
   },
 
-  dequeue(type) {
-    // Remove a pet from the queue.
+  dequeueCat(type) {
+    // Remove a cat from the queue.
+    pets.cats.dequeue()
+  },
+
+  dequeueDog(type) {
+    // Remove a dog from the queue.
+    pets.dogs.dequeue()
   }
 
 }

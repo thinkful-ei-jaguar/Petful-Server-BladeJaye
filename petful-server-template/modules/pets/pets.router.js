@@ -18,8 +18,16 @@ router.get('/api/dog', (req, res, next) => {
   res.send(Pets.getDogs());
 })
 
-router.delete('/', json, (req, res) => {
-  // Remove a pet from adoption.
+router.delete('/api/cat', json, (req, res) => {
+  // Remove a cat from adoption.
+  Pets.dequeueCat()
+  res.send(204)
+})
+
+router.delete('/api/dog', json, (req, res) => {
+  // Remove a dog from adoption.
+  Pets.dequeueDog()
+  res.send(204)
 })
 
 module.exports = router
